@@ -1,23 +1,52 @@
 // Your code here
 function mapToNegativize(sourceArray) {
-   return sourceArray.map(num => num*(-1))
+   let newArr = []
+   for (let i = 0; i<sourceArray.length; i++){
+      newArr.push(-1*sourceArray[i])
+   }
+   return newArr
+   //return sourceArray.map(num => num*(-1))
+
     
 };
 
 function mapToNoChange(sourceArray) {
-   return sourceArray.map(e => e)
+   let newA = []
+   for(let i=0; i<sourceArray.length; i++) {
+      newA.push(sourceArray[i])
+   }
+   return newA
+   //return sourceArray.map(e => e)
 };
 
 function mapToDouble(sourceArray) {
-   return sourceArray.map(num => num*2)
+   let newA = []
+   for (let i=0; i<sourceArray.length;i++){
+      newA.push(sourceArray[i]*2)
+   }
+   return newA
+   //return sourceArray.map(num => num*2)
 };
 
 function mapToSquare(sourceArray) {
-   return sourceArray.map(num => num**2)
+   let newA = []
+   for(let i=0; i<sourceArray.length; i++){
+      newA.push(sourceArray[i]**2)
+   }
+   return newA
+
+   //return sourceArray.map(num => num**2)
 };
 
 function reduceToTotal(sourceArr, starttingPoint = 0) {
-   return sourceArr.reduce( function (total, currentValue){return total + currentValue}, starttingPoint)
+   let value = starttingPoint
+   for(let i=0; i<sourceArr.length; i++){
+       value = value + sourceArr[i]
+   }
+   return value
+  
+
+   //return sourceArr.reduce( function (total, currentValue){return total + currentValue}, starttingPoint)
 };
 
 function reduceToAllTrue(sourceArr) {
